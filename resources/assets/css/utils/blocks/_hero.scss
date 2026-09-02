@@ -1,0 +1,86 @@
+.s-hero {
+  padding-top: clamp-calc(90px, 91px);
+
+  > .container {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    grid-template-areas: "left right";
+    grid-gap: rem(20);
+
+    @include lessThan(laptop) {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "left"
+        "right";
+    }
+  }
+
+  &-header {
+    @include flex(column, nowrap, center, start);
+
+    grid-area: left;
+    position: relative;
+
+    .c-title {
+      color: color(text-background_body);
+    }
+
+    &-content {
+      &__text {
+        margin: rem(32) 0;
+        animation-delay: 1.2s;
+      }
+
+      .btn {
+        animation-delay: 1.2s;
+      }
+    }
+
+    .c-socials {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+
+      @include lessThan(laptop) {
+        position: relative;
+        margin-top: rem(64);
+      }
+    }
+  }
+
+  .c-image {
+    grid-area: right;
+    height: clamp-calc(400px, 707px);
+    max-height: vh(900);
+    overflow: hidden;
+
+    animation-name: zoom-out;
+    animation-duration: 1.5s;
+    animation-delay: 0.5s;
+    animation-timing-function: $cubic-transition;
+    animation-fill-mode: forwards;
+
+    img {
+      height: clamp-calc(400px, 707px);
+      max-height: vh(900);
+
+      clip-path: polygon(
+          50% 0%,
+          50% 0%,
+          50% 100%,
+          50% 100%
+      );
+      animation-name: clipPath;
+      animation-duration: 2s;
+      animation-delay: 0.5s;
+      animation-timing-function: $cubic-transition;
+      animation-fill-mode: forwards;
+
+      @include lessThan(laptop) {
+        clip-path: none;
+        animation-name: none;
+      }
+    }
+  }
+}

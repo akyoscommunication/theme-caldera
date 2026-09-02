@@ -1,0 +1,62 @@
+.s-numbers {
+  &__text {
+    @extend %fs-20;
+
+    margin-top: rem(24);
+
+    p {
+      margin: 0;
+    }
+  }
+
+  > .container {
+    > .c-title {
+      @extend %fs-33;
+
+      width: fit-content;
+      margin: auto;
+    }
+  }
+
+  &-header {
+    @include flex(row, wrap, space-between, center);
+
+    gap: rem(52);
+  }
+
+  &-list {
+    @include flex(row, wrap, space-between, center);
+
+    margin-top: rem(82);
+    gap: rem(22);
+
+    .c-number {
+      flex: 0 0 calc(33.333% - 20px);
+
+      @include lessThan($tablet) {
+        flex: 0 0 calc(50% - 20px);
+      }
+      @include lessThan($mobile) {
+        flex: 0 0 calc(100% - 20px);
+      }
+
+      &:nth-child(1) {
+        background: color(primary);
+        color: color(text-primary);
+      }
+
+      &:nth-child(2) {
+        background: color(secondary);
+        color: color(text-secondary);
+      }
+
+      &:nth-child(3) {
+        border: rem(2) solid color(primary);
+      }
+    }
+
+    @include lessThan($mobile) {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.c-filter {
+  &-buttons {
+    @include flex(row, wrap, start, center);
+
+    column-gap: rem(45);
+    row-gap: rem(32);
+
+    .btn {
+      &--active {
+        font-weight: bold;
+        opacity: 1 !important;
+      }
+
+      &--filter {
+        position: relative;
+        display: block;
+        width: fit-content;
+        min-width: initial;
+        opacity: 0.8;
+
+        &:hover {
+          opacity: 1 !important;
+        }
+
+        span {
+          span {
+            @extend %fs-13;
+            position: absolute;
+            margin-left: rem(6);
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

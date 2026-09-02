@@ -1,0 +1,57 @@
+.s-archive {
+  padding-top: rem(204);
+
+  &-hero {
+    position: relative;
+    z-index: 1;
+
+    .c-title {
+      margin-bottom: rem(8);
+    }
+
+    &__description {
+      margin-bottom: rem(60);
+    }
+
+    .c-image {
+      max-height: clamp-calc(250px ,463px);
+
+      img {
+        max-height: clamp-calc(250px ,463px);
+        animation-name: zoom-out;
+        animation-duration: 2s;
+        animation-timing-function: $cubic-transition;
+        animation-fill-mode: forwards;
+
+      }
+    }
+
+    &:before {
+      content: '';
+      background: color(primary);
+      height: clamp-calc(200px, 350px);
+      position: absolute;
+      left: -100%;
+      right: -100%;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+
+  &--inner {
+    background: color(primary);
+    color: color(text-primary) !important;
+    border-bottom-left-radius: rem(64);
+    border-bottom-right-radius: rem(64);
+    padding-block: rem(80);
+
+    @include lessThan(mobileonly) {
+      border-bottom-left-radius: rem(32);
+      border-bottom-right-radius: rem(32);
+    }
+  }
+
+  @include lessThan($mobileXs) {
+    padding-top: rem(150);
+  }
+}

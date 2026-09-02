@@ -1,0 +1,57 @@
+.c-team {
+  @include flex(column, nowrap, center, center);
+  cursor: grab;
+
+  position: relative;
+  width: 100%;
+
+  &--empty {
+    @include lessThan(tablet) {
+      display: none;
+    }
+  }
+
+  .c-image {
+    height: 240px;
+    width: 100%;
+
+    @include lessThan(tablet) {
+      height: rem(400);
+    }
+
+    img {
+      object-position: top;
+      transition: 0.5s $cubic-transition;
+    }
+  }
+
+  &-content {
+    @include flex(column, nowrap, end, start);
+
+    position: absolute;
+    inset: 0;
+    padding: rem(10);
+    color: color(text-primary);
+    background: rgba(0, 0, 0, 0.2);
+
+    &__title {
+      @extend %fs-16;
+      padding-top: rem(20);
+      font-weight: 400;
+      font-family: $font-family;
+    }
+
+    &__text {
+      @extend %fs-13;
+      padding-top: rem(3);
+    }
+  }
+
+  &:hover {
+    .c-image {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

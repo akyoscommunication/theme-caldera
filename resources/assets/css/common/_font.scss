@@ -1,0 +1,163 @@
+:root {
+  font-size: $html-font-size;
+  font-family: $font-family;
+}
+
+//----ADE----//
+
+@font-face {
+  font-family: 'Ade';
+  src: url($assets-path + '/fonts/AdeDisplay.woff2') format('woff2'),
+  url($assets-path + '/fonts/AdeDisplay.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+//----PP Agrandir----//
+
+@font-face {
+  font-family: 'PP Agrandir';
+  src: url($assets-path + '/fonts/Agrandir/PPAgrandir-Bold.woff2') format('woff2'),
+  url($assets-path + '/fonts/Agrandir/PPAgrandir-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Agrandir';
+  src: url($assets-path + '/fonts/Agrandir/PPAgrandir-GrandHeavy.woff2') format('woff2'),
+  url($assets-path + '/fonts/Agrandir/PPAgrandir-GrandHeavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Agrandir';
+  src: url($assets-path + '/fonts/Agrandir/PPAgrandir-GrandItalic.woff2') format('woff2'),
+  url($assets-path + '/fonts/Agrandir/PPAgrandir-GrandItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Agrandir';
+  src: url($assets-path + '/fonts/Agrandir/PPAgrandir-GrandLight.woff2') format('woff2'),
+  url($assets-path + '/fonts/Agrandir/PPAgrandir-GrandLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Agrandir';
+  src: url($assets-path + '/fonts/Agrandir/PPAgrandir-GrandRegular.woff2') format('woff2'),
+  url($assets-path + '/fonts/Agrandir/PPAgrandir-GrandRegular.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Agrandir';
+  src: url($assets-path + '/fonts/Agrandir/PPAgrandir-Italic.woff2') format('woff2'),
+  url($assets-path + '/fonts/Agrandir/PPAgrandir-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Agrandir';
+  src: url($assets-path + '/fonts/Agrandir/PPAgrandir-NarrowBlack.woff2') format('woff2'),
+  url($assets-path + '/fonts/Agrandir/PPAgrandir-NarrowBlack.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Agrandir';
+  src: url($assets-path + '/fonts/Agrandir/PPAgrandir-Regular.woff2') format('woff2'),
+  url($assets-path + '/fonts/Agrandir/PPAgrandir-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Agrandir';
+  src: url($assets-path + '/fonts/Agrandir/PPAgrandir-ThinItalic.woff2') format('woff2'),
+  url($assets-path + '/fonts/Agrandir/PPAgrandir-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Agrandir';
+  src: url($assets-path + '/fonts/Agrandir/PPAgrandir-TightBlack.woff2') format('woff2'),
+  url($assets-path + '/fonts/Agrandir/PPAgrandir-TightBlack.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Agrandir';
+  src: url($assets-path + '/fonts/Agrandir/PPAgrandir-TightBold.woff2') format('woff2'),
+  url($assets-path + '/fonts/Agrandir/PPAgrandir-TightBold.woff2') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+%fs {
+  &-214 {
+    font-size: clamp-calc(104px, 214px);
+    line-height: clamp-calc(120px, 240px);
+  }
+
+  &-104 {
+    font-size: clamp-calc(77px, 104px);
+    line-height: clamp-calc(90px, 120px);
+  }
+
+  &-78 {
+    font-size: clamp-calc(45px, 78px);
+    line-height: clamp-calc(69px, 90px);
+  }
+
+  &-58 {
+    font-size: clamp-calc(35px, 58px);
+    line-height: clamp-calc(41px, 69px);
+  }
+
+  &-33 {
+    font-size: clamp-calc(24px, 33px);
+    line-height: clamp-calc(32px, 41px);
+  }
+
+  &-26 {
+    font-size: clamp-calc(20px, 26px);
+    line-height: clamp-calc(26px, 32px);
+  }
+
+  &-20 {
+    font-size: clamp-calc(18px, 20px);
+  }
+
+  &-16 {
+    font-size: rem(16);
+    line-height: normal;
+    font-weight: 400;
+  }
+
+  &-13 {
+    font-size: rem(13);
+  }
+}

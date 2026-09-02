@@ -1,0 +1,88 @@
+.forminator-ui {
+  .forminator-row {
+    input, textarea {
+      background: transparent !important;
+      border-radius: 0 !important;
+      border-bottom: rem(1) solid color(text-background_body) !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+      padding: rem(8) 0 !important;
+
+      &::placeholder {
+        color: color(text-background_body) !important;
+      }
+    }
+
+    .forminator-field {
+      position: relative;
+
+      label {
+        display: none !important;
+        position: absolute;
+        font-size: rem(13) !important;
+        top: rem(-12);
+        left: rem(20);
+        background: color(background_body);
+        color: color(text-background_body);
+        padding-inline: rem(4);
+        font-weight: 400 !important;
+      }
+
+      .btn {
+        display: flex !important;
+        flex-direction: row-reverse !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: rem(8) !important;
+        font-weight: 400 !important;
+        color: color(text-background_body) !important;
+        overflow: hidden !important;
+        width: fit-content !important;
+        font-size: rem(16) !important;
+        font-family: $font-family !important;
+
+        &:hover {
+          box-shadow: none !important;
+        }
+      }
+    }
+
+    .checkbox-form {
+      .forminator-label {
+        display: none !important;
+      }
+
+      label {
+        display: block !important;
+        position: initial;
+        top: initial;
+        left: initial;
+
+        .forminator-checkbox-box {
+          background: transparent !important;
+        }
+      }
+
+      .forminator-checkbox {
+        &.forminator-consent {
+          .forminator-checkbox-box {
+            border-color: color(text-background_body) !important;
+          }
+        }
+      }
+
+      .forminator-checkbox__wrapper {
+        align-items: center !important;
+
+        .forminator-checkbox__label {
+          p {
+            font-size: rem(16) !important;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.s-team {
+  > .container {
+    padding-block: rem(40);
+    position: relative;
+
+    .s-team {
+      &__text {
+        margin-top: rem(11);
+        max-width: 50%;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      &-list {
+        margin-top: rem(32);
+
+        &-wrapper {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(196px, 1fr));
+
+          grid-column-gap: rem(20);
+          grid-row-gap: rem(48);
+
+          @include  lessThan(tablet) {
+            grid-row-gap: rem(20);
+          }
+
+          @include lessThan(mobileonly) {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}

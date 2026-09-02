@@ -1,0 +1,45 @@
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  @extend %fs-78;
+  font-weight: 300;
+  letter-spacing: -3.9px;
+  text-transform: uppercase;
+  font-family: $font-family-title;
+}
+
+h3 {
+  @extend %fs-33;
+  font-weight: 400;
+  font-family: $font-family;
+}
+
+h4 {
+  @extend %fs-20;
+  font-weight: normal;
+  font-family: $font-family;
+}
+
+h2 {
+  @extend %fs-33;
+
+  position: relative;
+  font-weight: normal;
+  font-family: $font-family;
+
+
+  @include lessThan($mobile) {
+    padding-left: 0;
+  }
+}
+
+.c-title {
+  span {
+    font-family: $font-family-title;
+  }
+}
+
+

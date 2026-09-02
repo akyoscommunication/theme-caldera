@@ -1,0 +1,89 @@
+.s-text-image-inline {
+  &-wrapper {
+    display: grid;
+    grid-template-rows: rem(168) 1fr;
+    grid-template-columns: 6fr 1fr 5fr;
+    grid-template-areas:
+      "text blank2 blank"
+      "text blank3 image";
+    grid-gap: rem(20);
+
+    @include lessThan(tablet) {
+      grid-template-rows: initial;
+      grid-template-areas:
+        "text"
+        "image";
+      grid-template-columns: 1fr;
+    }
+
+    &.reverse {
+      grid-template-columns: 5fr 1fr 6fr;
+      grid-template-areas:
+      "blank blank2 text"
+      "image blank3 text";
+
+      @include lessThan(tablet) {
+        grid-template-rows: initial;
+        grid-template-areas:
+        "image"
+        "text";
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &--image {
+      grid-area: image;
+
+      .c-image {
+        height: 100%;
+      }
+
+      @include lessThan(tablet) {
+        height: rem(250);
+      }
+    }
+
+    &--text {
+      grid-area: text;
+
+      display: grid;
+      grid-template-areas:
+        "image blank"
+        "text text";
+      grid-template-columns: 1fr 1fr;
+      grid-gap: rem(20);
+
+      @at-root .reverse & {
+        grid-template-areas:
+        "blank image"
+        "text text";
+      }
+
+      @include lessThan(tablet) {
+        display: block;
+      }
+
+      @at-root .s-text-image-inline__content {
+        margin-top: rem(48);
+      }
+
+      .btn {
+        margin-top: rem(32);
+      }
+
+
+      .c-image {
+        grid-area: image;
+        height: clamp-calc(250px, 360px);
+
+        @include lessThan(tablet) {
+          margin-bottom: rem(20);
+        }
+      }
+
+      &_inner {
+        grid-area: text;
+      }
+    }
+  }
+}

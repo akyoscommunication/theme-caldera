@@ -1,0 +1,137 @@
+.s-text-image {
+  > .container {
+    display: grid;
+    grid-template-columns: 1fr 5fr 4fr;
+    grid-template-areas: "blank content slider";
+    grid-gap: rem(5);
+
+    @include lessThan(laptop) {
+      grid-template-columns: 1fr;
+      grid-template-areas: "content"
+                            "slider";
+    }
+
+    &.reverse {
+      grid-template-columns: 4fr 5fr 1fr;
+      grid-template-areas: "slider content";
+
+      @include lessThan(laptop) {
+        grid-template-columns: 1fr;
+        grid-template-areas: "slider"
+                             "content";
+      }
+
+      > .c-title {
+        width: fit-content;
+      }
+
+      .swiper {
+        padding-left: rem(75);
+        padding-top: rem(35);
+        padding-bottom: rem(50);
+      }
+    }
+  }
+
+  &-wrapper {
+    grid-area: content;
+    margin: auto 0;
+  }
+
+
+  &__text {
+    margin-top: rem(48);
+    margin-bottom: rem(32);
+  }
+
+  .swiper {
+    grid-area: slider;
+    max-width: rem(650);
+    padding-left: rem(139);
+    padding-top: rem(35);
+    padding-bottom: rem(50);
+
+    @include lessThan(laptop) {
+      display: none;
+    }
+
+    &:last-child {
+      display: none;
+
+      @include lessThan(laptop) {
+        display: block !important;
+        transform: translateX(0);
+        padding-left: 0 !important;
+      }
+    }
+
+    @include lessThan(laptop) {
+      max-width: 100%;
+    }
+
+    &-buttons {
+      justify-content: center !important;
+      margin-left: rem(-150);
+      margin-top: rem(16) !important;
+
+      @include lessThan(laptop) {
+        margin-left: 0;
+        margin-bottom: rem(24);
+        margin-top: 0 !important;
+      }
+    }
+
+    &-wrapper {
+      transform-style: initial !important;
+    }
+
+    &-slide {
+      height: clamp-calc(350px, 664px);
+      max-width: rem(500);
+      overflow: visible;
+
+      @include lessThan(laptop) {
+        max-width: 100%;
+      }
+
+      &-shadow {
+        display: none;
+      }
+
+      .c-image {
+        height: clamp-calc(350px, 664px);
+        width: rem(431);
+
+        @include lessThan(laptop) {
+          width: 100%;
+          height: 100%;
+        }
+
+        img {
+          height: 100%;
+        }
+      }
+
+      &:nth-child(1) {
+        .c-image {
+          transform: rotate(-7.2deg);
+
+          @include lessThan(laptop) {
+            transform: rotate(0deg);
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .c-image {
+          transform: rotate(10.1deg);
+
+          @include lessThan(laptop) {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+  }
+}
+

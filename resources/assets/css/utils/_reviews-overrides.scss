@@ -1,0 +1,47 @@
+.s-reviews {
+  > .container {
+    padding-block: rem(40);
+  }
+
+  > .container > .c-title,
+  &__header > .c-title {
+    @extend %fs-33;
+  }
+
+  &__text {
+    margin-top: rem(11);
+    max-width: 50%;
+
+    @include lessThan(tablet) {
+      max-width: none;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &-list {
+    .slider--reviews {
+      .swiper-buttons {
+        margin-top: rem(48);
+      }
+
+      .s-reviews-item {
+        background-color: color(secondary);
+        color: color(text-secondary);
+        padding: rem(20);
+        flex-direction: column;
+
+        &__avatar img {
+          width: rem(56);
+          height: rem(56);
+        }
+
+        &__body {
+          gap: rem(8);
+        }
+      }
+    }
+  }
+}
