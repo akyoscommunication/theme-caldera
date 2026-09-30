@@ -23,7 +23,6 @@
       :perXs="1"
       :modules="['navigation']"
       effect="cards"
-      animation-stagger
     >
       @foreach($images as $image)
         <div class="swiper-slide"
@@ -40,8 +39,6 @@
       :perSm="1"
       :perXs="1"
       :modules="['navigation']"
-      effect
-      animation-stagger
     >
       @foreach($images as $image)
         <div class="swiper-slide"
