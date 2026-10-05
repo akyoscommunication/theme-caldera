@@ -47,9 +47,23 @@ $dropdown-icon: $assets-path + "/icons/dropdown.svg";
       opacity: 0;
 
       .c-image {
-        max-width: rem(90);
+        display: block;
+        width: rem(170);
+        max-width: 100%;
+        height: auto;
+
+        @include lessThan($tablet) {
+          width: rem(140);
+        }
+
+        @include lessThan($mobile) {
+          width: rem(120);
+        }
 
         img {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
           transition: filter 0.3s $cubic-transition;
         }
       }

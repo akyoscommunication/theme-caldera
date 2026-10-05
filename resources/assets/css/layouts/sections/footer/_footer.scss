@@ -48,12 +48,22 @@ footer {
       gap: rem(24);
 
       .c-image {
-        max-width: rem(90);
-        width: 100%;
+        display: block;
+        width: rem(170);
+        max-width: 100%;
+        height: auto;
+
+        @include lessThan($tablet) {
+          width: rem(140);
+        }
+
+        @include lessThan($mobile) {
+          width: rem(120);
+        }
 
         img {
           width: 100%;
-          height: 100%;
+          height: auto;
           object-fit: contain;
         }
       }
@@ -140,17 +150,35 @@ footer {
   }
 
   &-sitename {
-    @extend %fs-214;
+    overflow: hidden;
+    width: 100%;
     background: color(primary);
     color: color(text-primary, 0.2);
     font-family: $font-family-title;
     text-transform: uppercase;
-    white-space: nowrap;
-    display: inline-block;
-    //animation-name: scrollText;
-    //animation-duration: 50s;
-    //animation-iteration-count: infinite;
-    //animation-timing-function: linear;
-    //transition: none;
+    line-height: 0.85;
+
+    &__track {
+      @extend %fs-214;
+      display: inline-flex;
+      flex-wrap: nowrap;
+      width: max-content;
+      white-space: nowrap;
+      animation: scrollText 50s linear infinite;
+      will-change: transform;
+
+      span {
+        flex-shrink: 0;
+        padding-inline: clamp-calc(40px, 100px);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      &__track {
+        animation: none;
+        width: 100%;
+        justify-content: center;
+      }
+    }
   }
 }

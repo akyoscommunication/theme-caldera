@@ -40,10 +40,11 @@
     </div>
   </div>
 
-  <div class="footer-sitename">
-    <span>{!! $siteName !!}</span>
-    <span>{!! $siteName !!}</span>
-    <span>{!! $siteName !!}</span>
+  <div class="footer-sitename" aria-label="{{ $siteName }}">
+    <div class="footer-sitename__track" aria-hidden="true">
+      <span>{{ $siteName }}</span>
+      <span>{{ $siteName }}</span>
+    </div>
   </div>
 
 
